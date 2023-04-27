@@ -1,6 +1,6 @@
-const ligar = document.getElementById('ligar');
-const desligar = document.getElementById('desligar');
-const lamp = document.getElementById('lamp')
+const ligadesliga = document.getElementById('ligadesliga');
+const lamp = document.getElementById('lamp');
+
 
 function ligada() {
     if( !lampadaQuebrada () ){
@@ -8,15 +8,23 @@ function ligada() {
     }
 }
 
-ligar.addEventListener('click', ligada);
+function lampLigadaDesligada() {
+    if(ligadesliga.textContent == 'Ligar') {
+        ligada();
+        ligadesliga.textContent = 'Desligar';
+    }else{
+        desligada();
+        ligadesliga.textContent = 'Ligar'
+    }
+}
+
+ligadesliga.addEventListener('click', lampLigadaDesligada);
 
 function desligada() {
     if( !lampadaQuebrada ()){
         lamp.src = './img/desligada.jpg'
     }
 }
-
-desligar.addEventListener('click', desligada)
 
 lamp.addEventListener('mouseover', ligada);
 lamp.addEventListener('mouseleave', desligada);
@@ -27,6 +35,6 @@ function quebrada() {
 
 lamp.addEventListener('dblclick', quebrada);
 
-function lampadaQuebrada(){
+function lampadaQuebrada() {
     return lamp.src.indexOf ('quebrada') > -1
 }
