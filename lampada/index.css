@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+main{
+    width: 45%;
+    height: 70vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+h1{
+    font-size: 7vh;
+}
+
+.botoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botoes button{
+    width: 15vw;
+    height: 5vh;
+    border: 0.3vh solid #EFA92E;
+    border-radius: 0.2vh;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.botoes button:hover{
+    transition: all .54s ease-in-out;
+    background: #EFA92E;
+    color: #fff;
+}
